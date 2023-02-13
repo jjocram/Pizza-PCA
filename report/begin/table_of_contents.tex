@@ -1,0 +1,27 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+    \cleardoublepage
+    \pdfbookmark{\contentsname}{tableofcontents}
+    
+    \tableofcontents
+
+    \clearpage
+
+    \begingroup 
+        \let\clearpage\relax
+        \let\cleardoublepage\relax
+        \let\cleardoublepage\relax
+     
+        \phantomsection
+        \pdfbookmark{\listfigurename}{lof}
+        \listoffigures
+
+        \vspace*{8ex}
+
+        \phantomsection
+        \pdfbookmark{\listtablename}{lot}
+        \listoftables
+        
+        \vspace*{8ex}
+    \endgroup
+\end{document}

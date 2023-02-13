@@ -1,0 +1,27 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\chapter{Methodology}
+
+\section{Covariance or correlation matrix}
+To choose which matrix to use to compute the PCs we can look at the correlation matrix of the variables in the dataset and their standard deviations. The factors to consider are:
+\begin{itemize}
+    \item important difference in standard deviation;
+    \item high correlations between variables.
+\end{itemize}
+
+\section{Standardization}
+Standardizing the input is an important task. In this way, we can address the problem that can occur if there are large differences between the ranges of initial variables; those variables with larger ranges will dominate over those with smaller ranges, which will lead to biased results. So, transforming the data to comparable scales can prevent this problem. Mathematically, this can be done by subtracting the mean and dividing by the standard deviation for each value of each variable.
+\begin{equation}
+    z = \frac{value - mean}{\sigma}
+\end{equation}
+
+\section{Number of Principal Components}
+The scree plot and the cumulative variance can be used to choose the number of PCs to keep. The scree plot is a graphical technique where a person has to identify the elbow in the plot. For the cumulative variance, we set the threshold at $95\%$.
+
+\section{Understand the results}
+To better understand how the computed PCs are correlated with the features of the dataset, the correlation matrix can be computed, and to help its visualization, it can be plotted as a heat map.
+
+\section{Plot the Principal Components}
+After the execution of the PCA algorithm, we can plot the new matrix. It is interesting to reassign the class label to each sample. In this way, we can better visualize how the different samples are scattered on the plot.
+
+\end{document}

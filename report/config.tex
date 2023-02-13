@@ -1,0 +1,76 @@
+% +++ Packages
+\usepackage[utf8]{inputenc}
+
+% Use subfiles 
+\usepackage{subfiles}
+
+% Useful for the ToC
+\usepackage{bookmark}
+
+% Avoid indentation for new paragraphs
+\usepackage[parfill]{parskip}
+
+% Bibliography and Glossary
+\usepackage[toc, acronym]{glossaries}
+\usepackage[backend=biber,style=numeric-comp,hyperref,backref,maxbibnames=9,maxcitenames=2]{biblatex}
+
+% Edit captions
+\usepackage{caption}
+
+% Colors
+\usepackage[dvipsnames]{xcolor}
+
+% Images
+\usepackage{graphicx}
+
+% Language
+\usepackage[english]{babel}
+
+% +++ Information to share among the document:
+\newcommand{\theTitle}{Low-rank Approximation for Data Analysis: PCA on Pizza dataset}
+
+% +++ Document configuration
+\title{\theTitle}
+
+% Bibliography file
+\addbibresource{bibliography.bib}
+
+% Captions
+\captionsetup{
+    tableposition=top,
+    figureposition=bottom,
+    font=small,
+    format=hang,
+    labelfont=bf
+}
+
+% Image directory
+\graphicspath{{images/}}
+
+% Links
+\hypersetup{
+    %hyperfootnotes=false,
+    %pdfpagelabels,
+    %draft,	% = elimina tutti i link (utile per stampe in bianco e nero)
+    colorlinks=true,
+    linktocpage=true,
+    pdfstartpage=1,
+    pdfstartview=FitV,
+    % Uncomment the following line to print the document in black and white
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=1, pdfstartview=FitV,
+    breaklinks=true,
+    pdfpagemode=UseNone,
+    pageanchor=true,
+    pdfpagemode=UseOutlines,
+    plainpages=false,
+    bookmarksnumbered,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    hypertexnames=true,
+    pdfhighlight=/O,
+    %nesting=true,
+    %frenchlinks,
+    urlcolor=GreenYellow,
+    linkcolor=RoyalBlue,
+    citecolor=ForestGreen,
+}

@@ -1,0 +1,52 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\chapter{Introduction}
+\section{Principal Component Analysis}
+Principal Component Analysis (PCA) is an unsupervised dimension-reducing technique applicable to datasets (seen as matrices) with $n$ features. This technique allows for the reduction of variables in a dataset while retaining as much information as possible (it is expected that features will lose their physical meaning). 
+\begin{itemize}
+    \item decrease computation time when working on the "new'' dataset;
+    \item decrease storage space consumption because the "new'' dataset is smaller;
+    \item increase the simplicity in making plot.
+\end{itemize}
+
+PCA allows you to find up to \(n\) Principal Components (PCs). These are new axes with the characteristic that from \(PC_1\) to \(PC_n\) the quantity of information decreases. There are two techniques to find PCs:
+\begin{enumerate}
+    \item \textbf{Covariance matrix}: if we want to keep some hierarchy of features. It means that some features are more important than others;
+    \item \textbf{Correlation matrix}: if all the features have the same importance.
+\end{enumerate}
+
+The number of PCs that we want to find is a parameter to choose. There are several ways to find which number is the best, and using a combination of them is usually a good choice. With the idea to plot the new matrix, two or three PCs are the best choice.
+These techniques are:
+\begin{itemize}
+    \item cumulative variance: choose $k$ PCs, with $k : t_k > t^*$ with $t^*$ the minimum value of cumulative variance that we want to have. Usually $>70\%$;
+    \item Kaiser rule: select the number of PCs comparing the eigenvalues of each PC with the mean of every PCs. Only the PC with eigenvalues greater than the mean are taken;
+    \item scree plot: plot the eigenvalues for each component number and choose the number of PCs where a elbow is visible in the plot;
+    \item LEV plot: it is a logarithmic transformation of the scree plot (LEV means Log EigenValues). It is used when the differences are small.
+\end{itemize}
+
+After choosing how many PCs to consider, the last step is to interpret the results. The idea is to understand how much any PCs is correlated to the original variables. This can be visualized with the help of the correlation circle if we chose to keep two PCs or with the help of a heat map of the correlation matrix between features and PCs.
+
+\section{Dataset}
+The dataset is from \href{https://data.world}{data.world}, specifically the dataset "Principal Component Analysis - Pizza Dataset" by Dhilip Subramanian has been chosen. The dataset has 300 rows and 9 columns.
+
+The columns are:
+\begin{itemize}
+    \item \textbf{brand:} pizza brand (class label);
+    \item \textbf{id:} number of sample analysed;
+    \item \textbf{mois:} amount of water per 100 grams in the sample;
+    \item \textbf{prot:} amount of protein per 100 grams in the sample;
+    \item \textbf{fat:} amount of fat per 100 grams in the sample;
+    \item \textbf{ash:} amount of ash per 100 grams in the sample;
+    \item \textbf{sodium:} amount of sodium per 100 grams in the sample;
+    \item \textbf{carb:} amount of carbohydrates per 100 grams in the sample;
+    \item \textbf{cal:} amount of calories per 100 grams in the sample.
+\end{itemize}
+\section{Tools}
+Python3 has been chosen to perform the PCA algorithm with the help of other libraries:
+\begin{itemize}
+    \item \textbf{scikit-learn:} Python package that provides a method to perform the PCA algorithm;
+    \item \textbf{pandas:} Python package used to read and visualize the dataset;
+    \item \textbf{matplotlib and seaborn:} Python packages used to make charts;
+    \item \textbf{jupyter-lab:} used to write and execute the Python code in a "notebook''. 
+\end{itemize}
+\end{document}

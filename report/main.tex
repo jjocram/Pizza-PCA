@@ -1,0 +1,20 @@
+\documentclass[12pt, a4paper, twoside, openright, english]{book}
+% Config contains imports, packages options, and custom commands
+\input{config}
+
+\begin{document}
+\frontmatter
+\subfile{begin/title_page}
+\subfile{begin/table_of_contents}
+
+\cleardoublepage
+
+\mainmatter
+\subfile{chapters/introduction}
+\subfile{chapters/methodology}
+\subfile{chapters/results}
+\subfile{chapters/conclusion}
+
+\nocite{jolliffe2005principal, slideCourse}
+\subfile{end/bibliography}
+\end{document}

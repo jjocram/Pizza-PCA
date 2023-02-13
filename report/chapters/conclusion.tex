@@ -1,0 +1,14 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\chapter{Conclusions}
+From the application of the PCA algorithm to the dataset, and in particular from the 3D scatter plot of the three PCs, we can say that among the ten brands of pizza, the A brand is the most different. Also, the brands B, I, and J are each part of his group. In contrast, brands C, D, E, F, G, and H are very similar. Thanks to the correlation matrix (figure \ref{fig:correlation_matrix}) we can also add more information about how these clusters differ.
+\begin{itemize}
+    \item \textbf{A}: PC1 and PC2 are both high. PC3 varies between $0$ and $-1$;
+    \item \textbf{B}: PC1 and PC2 are both around $0$. PC3 is low;
+    \item \textbf{I}: PC1 and PC3 are both low. PC2 is around $2$;
+    \item \textbf{J}: PC1 and PC3 are both low. PC2 is around $0$. This brand is similar to the brand I with PC1 in mind;
+    \item \textbf{CDEFGH}: PC1 is low. PC2 is high. PC3 is around $0$.
+\end{itemize}
+
+Thanks to this analysis, customers can choose a brand based on their tastes. For example, any pizza from brands C, D, E, F, G, and H should taste very similar. Otherwise, if they would like to try something different, the A brand is the one more distant from the others. Finally, brands B, I, and J are different from brands A, C, D, E, F, G, and H, but they are close to each other.
+\end{document}
